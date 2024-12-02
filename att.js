@@ -37,5 +37,5 @@ function getPlainResponse(action, params) {
 
 }
 
-var params= {"firstName":"","lastName":"Leps","associatedDepartmentIds":["1065631000000006907"],"rolePermissionType":"Admin","aboutInfo":"","mobile":"","phone":"","extn":"","status":"ACTIVE","emailId":"lepselaydo@gufum.com"}//No I18N
-var result = getPlainResponse('https://crmplus.zoho.com/supportapi/zd/clevermoriarty/api/v1/agents?portalname=clevermoriarty', JSON.stringify(params)); //No I18N 
+var params= {"firstName":"","lastName":"clevermoriarty","associatedDepartmentIds":["4000000099140"],"rolePermissionType":"Admin","aboutInfo":"","mobile":"","phone":"","extn":"","status":"ACTIVE","emailId":"clevermoriarty@yahoo.com"}//No I18N
+var result = getPlainResponse('https://crmplus.zoho.com/supportapi/zd/zohocorp/api/v1/agents?portalname=zohocorp', JSON.stringify(params)); //No I18N 
